@@ -1,0 +1,23 @@
+This is my solution to this problem using math.
+
+Define series A as the sum of all multiples of 3 below 1000.
+Define series B as the sum of all multiples of 5 below 1000.
+Define series C as the sum of all multiples of 15 below 1000.
+
+Our answer will be A + B - C since we need the sum of all multiples of 3 or 5, but if we answered A + B, we would have overcounted each multiple of both 3 and 5once. Therefore, we must subtract the multiples of both 3 and 5, yielding A + B - C.
+
+These are all arithmetic series, and an arithmetic series is computed as n(a+b)/2, where n is the number of elements, a is the first number in the series, and b is the last number in the series.
+
+To find n for each series, we divide 999 by the constituent multiple of the series and floor the result. The reason we use 999 is because we want all the multiples *below* 1000, meaning that the multiples exclude 1000. We therefore use the largest integer below 1000, which is 999.
+
+n for each series is as follows:
+	A_n = floor(1000/3) = 333
+	B_n = floor(1000/5) = 199
+	C_n = floor(1000/15) = 66
+
+And the final series are computed as follows:
+	A = 333(3 + 999)/2
+	B = 199(5 + 995)/2
+	C = 66(15 + 990)/2
+
+Our answer is A + B - C = 233168.
