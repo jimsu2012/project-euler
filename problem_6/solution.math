@@ -1,0 +1,6 @@
+This problem can be solved with math formulas and a calculator.
+
+The sum of consecutive squares from 1 to n is n(n+1)(2n+1)/6 while the sum of consecutive numbers from 1 to n is n(n+1)/2. Thus, our expression reduces to:
+	(1 + 2+ ... + 100)^2 - (1^2 + 2^2 + ... + 100^2) = (100(101)/2)^2 - (100(101)(201))/6.
+
+Evaluating this expression with a four-function calculator yields 25164150.
